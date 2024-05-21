@@ -1,0 +1,495 @@
+:root {
+  --red: #D4594D;
+  --white: #fff;
+  --black: #000;
+  --dark: #2c2c2c;
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    padding: 3rem 5rem;
+}
+
+section .sectionTitle {
+  font-size: 5rem;
+  font-family: "Objectorange", "Arial", sans-serif;
+  transform: rotate(-4deg);
+  margin-bottom: 5rem;
+}
+
+/* HEAD */
+
+#video {
+  align-items: center;
+  justify-content: center;
+
+}
+
+/* nav */
+
+.iconNav {
+  position: fixed;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  top: 2rem;
+  right: 2rem;
+  z-index: 1;
+  cursor: pointer;
+  /* background-image: url('./static/menu_logo.svg');
+  background-position: center;
+  background-size: cover; */
+}
+
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+  height: 0%;
+  width: 100%;
+  position: fixed; /* Stay in place */
+  z-index: 3; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0,0,0); /* Black fallback color */
+  background-color: rgba(0,0,0, 0.5); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  overflow-y: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  
+}
+
+.blur {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(10px);
+  z-index: 1;
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+.overlay-content .navItem {
+  text-transform: uppercase;
+  /* letter-spacing: 2rem; */
+  margin-bottom: 2rem;
+}
+
+.overlay-content .navItem:hover {
+  color: var(--red);
+  /* letter-spacing: 1rem; */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: var(--red);
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+
+  /* Style the video: 100% width and height to cover the entire window */
+  #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 125%;
+    min-height: 125%;
+  }
+  
+  /* Add some content at the bottom of the video/page */
+  .content {
+    top: 0;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.7);
+    color: #f1f1f1;
+    width: 100%;
+    height: 100%;
+  }
+
+  .content .logo {
+    width: 60vw;
+  }
+
+.socialLinks {
+  position: absolute;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 2rem 1rem;
+  gap: 1rem;
+  border-radius: 0 20px 20px 0;
+}
+.socialLinks a i {
+  color: #fff;
+  transition: all .2s linear;
+}
+
+.socialLinks a:hover i {
+  color: var(--red);
+}
+
+
+/* ABOUT */
+
+#about {
+}
+
+#about .carousel {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  animation: fade 5s linear infinite;
+  animation-delay: 2.5s;
+  background-size: cover;
+  background-position: center;
+}
+
+#about .sectionText {
+  transform: rotate(3deg);
+  background-color: rgba(225, 225, 225, 0.7);
+  padding: 1rem;
+  line-height: 1.5;
+}
+
+/* CONCERT */
+
+
+.concertList {
+  margin-top: 4rem;
+}
+
+.concertItem {
+  display: flex;
+  justify-content: center;
+  grid-gap: 4rem;
+  margin-bottom: 3rem;
+  align-items: center;
+  padding-bottom: 2rem;
+  border-bottom: var(--white) solid 1px;
+}
+
+.concertItem .concertItemDescription {
+  width: 50%;
+}
+
+.concertItem .concertItemDate {
+  text-align: center;
+}
+
+.concertItem .concertItemDate .day {
+  font-family: 'RubikDirt';
+  /* font-weight: bold; */
+  font-size: 3rem;
+}
+
+.concertItem .concertItemDate .month {
+  font-size: 1.5rem;
+}
+
+/* RELEASES */
+
+
+
+.releasesGrid {
+  display: grid;
+  margin-top: 4rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+}
+
+.releaseItem {
+  position: relative;
+  transition: all .3s linear;
+  overflow: hidden;
+}
+
+.releaseItem img {
+  transition: all .3s linear;
+  width: 100%;
+}
+
+.releaseItem:hover > img {
+  filter: blur(5px);
+  transform: scale(1.05);
+}
+
+.releaseItem:hover .releaseOverlay {
+  visibility: visible;
+  transition: all .3s linear;
+  opacity: 1;
+}
+
+.releaseItem .releaseOverlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .3s linear;
+  opacity: 0;
+
+}
+
+.releaseInfo {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.releaseInfo .releaseTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.releaseInfo .releaseYear {
+  font-size: 1.5rem;
+  font-weight: lighter;
+  margin-bottom: 1rem;
+}
+
+.releaseInfo .releaseLinks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.releaseInfo .releaseLinks a img {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+}
+
+
+/* FOOTER */
+
+
+
+footer {
+    color: #fff;
+    background-color: #2c2c2c;
+    position: relative;
+}
+
+.footer-section {
+  padding: 3rem 5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-contacts-block h4.title {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  color: var(--red);
+  /* font-family: "Objectorange", "Arial", sans-serif; */
+  font-family: 'RubikDirt';;
+}
+
+.footer-contacts-block .contact-item {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.footer-contacts-block .contact-item.phone {
+  font-size: 1rem;
+  margin-bottom: .5rem;
+
+}
+
+.footer-contacts-block .contact-item.phone a {
+  color: #fff;
+}
+
+.footer-contacts-block .contact-item.phone i {
+  margin-right: 1rem;
+}
+
+.footer-contacts-block .contact-item.doc {
+  margin-top: 2rem;
+}
+
+.footer-socialLinks {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1rem;
+  padding-top: 3rem;
+  gap: 2rem;
+  border-top:  var(--red) solid 1px;
+  width: 87vw;
+  margin: 0 auto;
+  color: var(--red);
+}
+
+.footer-socialLinks a {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.footer-socialLinks a i {
+  color: var(--red);
+}
+
+.footer-group {
+  display: flex;
+  justify-content: end;
+  padding: 3rem 5rem;
+  padding-top: 0;
+  color: var(--red);
+}
+
+
+#video, #concerts {
+  color: #fff;
+  background-color: #000;
+}
+
+#about, #releases {
+  color: #000;
+  background-color: #fff;
+}
+#concerts {
+  background-color: var(--red);
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1920px) {
+  video {
+    scale: 1.1;
+  }
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1440px) {
+  video {
+    scale: 1.2;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
+  video {
+    scale: 1.5;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  video {
+    scale: 3.3;
+  }
+}
+
+
+
+
+  
+  /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+
+    .releasesGrid {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: 1fr;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .releasesGrid {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: 1fr;
+    }
+  }
+
+  @font-face {
+    font-family: "RubikDirt";
+    font-style: normal;
+    font-weight: 400;
+    src: local("RubikDirt"),
+       /* Если не получилось, загрузит woff2 */
+       url("./static/fonts/RubikDirt/RubikDirt-Regular.woff2") format("woff2"),
+       /* Если браузер не поддерживает woff2, загрузит woff */
+       url("./static/fonts/RubikDirt/RubikDirt-Regular.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Objectorange";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Objectorange"),
+       /* Если не получилось, загрузит woff2 */
+       url("./static/fonts/Objectorange/Objectorange.woff2") format("woff2"),
+       /* Если браузер не поддерживает woff2, загрузит woff */
+       url("./static/fonts/Objectorange/Objectorange.woff") format("woff");
+  }
+
+  
+@keyframes fade {
+  0% { opacity: 1 }
+  50% { opacity: 0 }
+  100% { opacity: 1 }
+}
+
+
+/* 
+    sm: '(max-width: 1024px)',
+    md: '(min-width: 1024px) and (max-width: 1280px)',
+    lg: '(min-width: 1280px) and (max-width: 1440px)',
+    xl: '(min-width: 1440px) and (max-width: 1920px)',
+    xxl: '(min-width: 1920px)',
+
+*/

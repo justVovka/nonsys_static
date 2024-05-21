@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>НЕсистема</title>
+    <link rel="icon" type="image/x-icon" href="./static/favicon.ico">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="blur"></div>
+    <header>
+        <!-- The overlay -->
+    <div id="myNav" class="overlay">
+
+        <!-- Button to close the overlay navigation -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  
+        <!-- Overlay content -->
+        <div class="overlay-content">
+            <a class="navItem" href="#about">О нас</a>
+            <a class="navItem" href="#concerts">Мероприятия</a>
+            <a class="navItem" href="#releases">Релизы</a>
+            <a class="navItem" href="#contacts">Контакты</a>
+        </div>
+    </div>
+  <!-- Use any element to open/show the overlay navigation menu -->
+
+    </header>
+    <section class="section" id="video">
+        <video autoplay muted loop id="myVideo">
+            <source src="./static/clip9_3.mp4" type="video/mp4">
+        </video>
+        <!-- Optional: some overlay text to describe the video -->
+        <div class="content">
+            <img class="logo" src="./static/logotype.svg" />
+        </div>
+        <div class="socialLinks">
+            <a href="#"><i class="fa-brands fa-vk"></i></a>
+            <a href="#"><i class="fa-brands fa-telegram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-solid fa-music"></i></a>
+        </div>
+        <span class="iconNav" onclick="openNav()">
+            <img src="./static/menu_logo.svg" alt="">
+        </span>
+    </section>
+    <section class="section" id="about">
+        <div class="carousel"></div>
+        <h2 class="sectionTitle">Кто мы?</h2>
+        <div class="sectionText">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet saepe rem provident, voluptatum nulla dignissimos dolorum omnis quas laudantium repellat, adipisci tempora tenetur, ipsam consequuntur nemo iste temporibus unde cum!
+            In perspiciatis suscipit iure voluptas laboriosam magnam, fuga facere necessitatibus quae laborum distinctio laudantium. Nisi iste, fugit repellat aspernatur neque non, ad quis, iusto repudiandae saepe laudantium placeat tempora eaque?
+            Eligendi corporis similique aperiam perspiciatis eos odit unde dolor esse quaerat, culpa deserunt tempore quisquam nulla rem voluptatibus. Praesentium qui vero ex iste nihil necessitatibus maxime incidunt eveniet deserunt debitis.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet saepe rem provident, voluptatum nulla dignissimos dolorum omnis quas laudantium repellat, adipisci tempora tenetur, ipsam consequuntur nemo iste temporibus unde cum!
+            In perspiciatis suscipit iure voluptas laboriosam magnam, fuga facere necessitatibus quae laborum distinctio laudantium. Nisi iste, fugit repellat aspernatur neque non, ad quis, iusto repudiandae saepe laudantium placeat tempora eaque?
+            Eligendi corporis similique aperiam perspiciatis eos odit unde dolor esse quaerat, culpa deserunt tempore quisquam nulla rem voluptatibus. Praesentium qui vero ex iste nihil necessitatibus maxime incidunt eveniet deserunt debitis.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet saepe rem provident, voluptatum nulla dignissimos dolorum omnis quas laudantium repellat, adipisci tempora tenetur, ipsam consequuntur nemo iste temporibus unde cum!
+            In perspiciatis suscipit iure voluptas laboriosam magnam, fuga facere necessitatibus quae laborum distinctio laudantium. Nisi iste, fugit repellat aspernatur neque non, ad quis, iusto repudiandae saepe laudantium placeat tempora eaque?
+            Eligendi corporis similique aperiam perspiciatis eos odit unde dolor esse quaerat, culpa deserunt tempore quisquam nulla rem voluptatibus. Praesentium qui vero ex iste nihil necessitatibus maxime incidunt eveniet deserunt debitis.</p>
+        </div>
+    </section>
+    <section class="section" id="concerts">
+        <h2 class="sectionTitle">Концерты:</h2>
+        <div class="concertList">
+            <div class="concertItem">
+                <div class="concertItemDate"><p class="day">24</p> <p class="month">июня</p></div>
+                <div class="concertItemDescription">Осётр-фест</div>
+                <div class="concertItemLink"><a href="#">ссылка</a></div>
+            </div>
+            <div class="concertItem">
+                <div class="concertItemDate"><p class="day">29</p> <p class="month">июня</p></div>
+                <div class="concertItemDescription">Фестиваль "Green-Fest"</div>
+                <div class="concertItemLink"><a href="#">ссылка</a></div>
+            </div>
+            <div class="concertItem">
+                <div class="concertItemDate"><p class="day">5</p> <p class="month">июля</p></div>
+                <div class="concertItemDescription">Санкт-Петербург, клуб "Огород"</div>
+                <div class="concertItemLink"><a href="#">ссылка</a></div>
+            </div>
+        </div>
+    </section>
+    <section class="section" id="releases">
+        <h2 class="sectionTitle">Релизы:</h2>
+        <div class="releasesGrid">
+            <div class="releaseItem">
+                <img src="https://avatars.yandex.net/get-music-content/10126140/1eb2a159.a.28736364-1/400x400" alt="">
+                <div class="releaseOverlay">
+                    <div class="releaseInfo">
+                        <p class="releaseTitle">Слепой</p>
+                        <p class="releaseYear">2023</p>
+                        <div class="releaseLinks">
+                            <a href="#">
+                                <img src="./static/icons/ya_music.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./static/icons/VK_Music_Full_Logo.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./static/icons/apple-music.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./static/icons/spotify.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="releaseItem">
+                <img src="https://avatars.yandex.net/get-music-content/6386858/5da1968a.a.30357824-1/400x400" alt="">
+                <div class="releaseOverlay">
+                    <div class="releaseInfo">
+                        <p class="releaseTitle">Сезон Охоты</p>
+                        <p class="releaseYear">2024</p>
+                        <div class="releaseLinks">
+                            <a href="#">
+                                <img src="./static/icons/ya_music.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./static/icons/VK_Music_Full_Logo.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./static/icons/apple-music.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./static/icons/spotify.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <footer class="footer" id="contacts">
+        <div class="footer-section">
+            <div class="footer-contacts-block">
+                <h4 class="title">Организация концертов</h3>
+                <p class="contact-item fio">Ольга Меньшова</p>
+                <p class="contact-item phone"><i class="fa-solid fa-phone"></i> +7 960 245 3423</p>
+                <p class="contact-item phone"><i class="fa-brands fa-telegram"></i> <a href="https://t.me/olMens">@olMens</a></p>
+                <p class="contact-item doc"><i class="fa-regular fa-file-word"></i> <a href="#">Бытовой райдер</a></p>
+            </div>
+            <div class="footer-contacts-block">
+                <h4 class="title">Работа со СМИ</h3>
+                <p class="contact-item fio">Иван Никоноров</p>
+                <p class="contact-item phone"><i class="fa-solid fa-phone"></i> +7 920 255 2312</p>
+                <p class="contact-item phone"><i class="fa-brands fa-whatsapp"></i> +7 920 255 2312</p>
+            </div>
+            <div class="footer-contacts-block">
+                <h4 class="title">Звукорежиссёр</h3>
+                    <p class="contact-item fio">Тамара Каграманян</p>
+                    <p class="contact-item phone"><i class="fa-solid fa-phone"></i> +7 926 470 2040</p>
+                    <p class="contact-item phone"><i class="fa-brands fa-telegram"></i> <a href="https://t.me/tatassoul">@tatassoul</a></p>
+                    <p class="contact-item doc"><i class="fa-regular fa-file-word"></i> <a href="#">Звуковой райдер</a></p>
+            </div>
+        </div>
+        <div class="footer-socialLinks">
+            <a href="#"><i class="fa-brands fa-vk"></i></a>
+            <a href="#"><i class="fa-brands fa-telegram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-solid fa-music"></i></a>
+        </div>
+        <div class="footer-group">
+            <p>© группа "НЕсистема" 2022-2024</p>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/9772bce570.js" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
